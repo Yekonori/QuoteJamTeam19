@@ -5,16 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    private GameManager() { } //au cas où certains fous tenteraient qd même d'utiliser le mot clé "new"
-
-    // Méthode d'accès statique (point d'accès global)
+    private GameManager() { }
     public static GameManager Instance { get { return instance; } }
     public CharacterMovement player;
 
     void Awake()
     {
         if (instance != null && instance != this)
-            Destroy(gameObject);    // Suppression d'une instance précédente (sécurité...sécurité...)
+            Destroy(gameObject);
 
         instance = this;
 
@@ -24,7 +22,6 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
-        // CharacterMovement.canMove = false;
         print("you lost.");
         player.StopPlayer();
     }
