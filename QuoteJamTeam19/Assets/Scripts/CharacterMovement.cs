@@ -10,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     private Rigidbody2D rigidB;
     private float moveY;
     private Vector2 movement;
+    private SpriteRenderer playerImg;
 
     public float verticalSpeed;
     public float horizontalSpeed;
@@ -19,6 +20,7 @@ public class CharacterMovement : MonoBehaviour
     {
         boxcollider = GetComponent<BoxCollider2D>();
         rigidB = GetComponent<Rigidbody2D>();
+        playerImg = GetComponentInChildren<SpriteRenderer>();
         canRun = true;
     }
 
@@ -33,6 +35,35 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidB.velocity = movement * verticalSpeed * Time.fixedDeltaTime;
+        if (canRun)
+        {
+            rigidB.velocity = movement * verticalSpeed * Time.fixedDeltaTime;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "obstacle")
+        {
+            Debug.Log("Collision!");
+            canRun = false;
+            rigidB.velocity = Vector2.zero;
+            StartCoroutine(Blinker());
+        }
+    }
+
+    IEnumerator Blinker()
+    {
+        Color tmp = playerImg.color;
+
+        for (int i = 0; i < 3; i++)
+        {
+            tmp.a = 0;
+            playerImg.color = tmp;
+            yield return new WaitForSeconds(0.25f);
+            tmp.a = 255;
+            playerImg.color = tmp;
+            yield return new WaitForSeconds(0.25f);
+        }
     }
 }
