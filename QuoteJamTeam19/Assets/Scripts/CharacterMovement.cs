@@ -35,4 +35,10 @@ public class CharacterMovement : MonoBehaviour
     {
         rigidB.velocity = movement * verticalSpeed * Time.fixedDeltaTime;
     }
+
+    public void StopPlayer()
+    {
+        canRun = false;
+        movement = Vector2.zero;
+    }
 }
