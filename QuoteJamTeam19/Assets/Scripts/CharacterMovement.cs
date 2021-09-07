@@ -8,12 +8,13 @@ public class CharacterMovement : MonoBehaviour
 {
     private BoxCollider2D boxcollider;
     private Rigidbody2D rigidB;
-    private float moveY;
+    private float verticalSpeed;
     private Vector2 movement;
     private SpriteRenderer playerImg;
     private bool isSlowed;
+    private float slowSpeedValue;
 
-    public float verticalSpeed;
+    public float playerSpeed;
     public float horizontalSpeed;
     public bool canRun;
 
@@ -30,15 +31,15 @@ public class CharacterMovement : MonoBehaviour
     {
         if (canRun)
         {
-            moveY = Input.GetAxis("Vertical");
+            verticalSpeed = Input.GetAxis("Vertical");
 
             if (!isSlowed)
             {
-                movement = new Vector2(horizontalSpeed, moveY);
+                movement = new Vector2(horizontalSpeed, verticalSpeed);
             }
             else
             {
-                Slowed(100, 0.8f);
+                movement = new Vector2(horizontalSpeed - (horizontalSpeed * slowSpeedValue), verticalSpeed - (verticalSpeed * slowSpeedValue));
             }
         }
     }
@@ -47,7 +48,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (canRun)
         {
-            rigidB.velocity = movement * verticalSpeed * Time.fixedDeltaTime;
+            rigidB.velocity = movement * playerSpeed * Time.fixedDeltaTime;
         }
     }
 
@@ -55,24 +56,34 @@ public class CharacterMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "obstacle")
         {
+            CommonObstacle commonObstacle = collision.gameObject.GetComponent<CommonObstacle>();
+
             Destroy(collision.gameObject);
             StartCoroutine(Blinker());
-            isSlowed = true;
+
+            if (commonObstacle != null)
+            {
+                slowSpeedValue = commonObstacle.slowEffect;
+                StartCoroutine(SetIsSlowed(commonObstacle.slowDuration));
+            }
+            else
+            {
+                slowSpeedValue = 0.5f;
+                StartCoroutine(SetIsSlowed(1.5f));
+            }            
         }
     }
 
-
-    private void Slowed(int duration, float slowAmountPercent)
+    private IEnumerator SetIsSlowed(float duration)
     {
-        float timer = 0;
-        while(timer <= duration)
-        {
-            movement = new Vector2(horizontalSpeed - (horizontalSpeed * slowAmountPercent), verticalSpeed - (verticalSpeed * slowAmountPercent));
-            timer += Time.deltaTime;
-        }
+        isSlowed = true;
+
+        yield return new WaitForSeconds(duration);
+
         isSlowed = false;
     }
-    IEnumerator Blinker()
+
+    private IEnumerator Blinker()
     {
         Color tmp = playerImg.color;
 
@@ -85,5 +96,11 @@ public class CharacterMovement : MonoBehaviour
             playerImg.color = tmp;
             yield return new WaitForSeconds(0.25f);
         }
+    }
+
+    public void StopPlayer()
+    {
+        canRun = false;
+        rigidB.velocity = Vector2.zero;
     }
 }
