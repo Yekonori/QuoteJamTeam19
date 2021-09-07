@@ -11,6 +11,7 @@ public class CharacterMovement : MonoBehaviour
     private float moveY;
     private Vector2 movement;
     private SpriteRenderer playerImg;
+    private bool isSlowed;
 
     public float verticalSpeed;
     public float horizontalSpeed;
@@ -22,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
         rigidB = GetComponent<Rigidbody2D>();
         playerImg = GetComponentInChildren<SpriteRenderer>();
         canRun = true;
+        isSlowed = false;
     }
 
     private void Update()
@@ -29,7 +31,15 @@ public class CharacterMovement : MonoBehaviour
         if (canRun)
         {
             moveY = Input.GetAxis("Vertical");
-            movement = new Vector2(horizontalSpeed, moveY);
+
+            if (!isSlowed)
+            {
+                movement = new Vector2(horizontalSpeed, moveY);
+            }
+            else
+            {
+                Slowed(100, 0.8f);
+            }
         }
     }
 
@@ -45,13 +55,23 @@ public class CharacterMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "obstacle")
         {
-            Debug.Log("Collision!");
-            canRun = false;
-            rigidB.velocity = Vector2.zero;
+            Destroy(collision.gameObject);
             StartCoroutine(Blinker());
+            isSlowed = true;
         }
     }
 
+
+    private void Slowed(int duration, float slowAmountPercent)
+    {
+        float timer = 0;
+        while(timer <= duration)
+        {
+            movement = new Vector2(horizontalSpeed - (horizontalSpeed * slowAmountPercent), verticalSpeed - (verticalSpeed * slowAmountPercent));
+            timer += Time.deltaTime;
+        }
+        isSlowed = false;
+    }
     IEnumerator Blinker()
     {
         Color tmp = playerImg.color;
