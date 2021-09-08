@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,20 @@ public class DignityBar : MonoBehaviour
     public static DignityBar Instance { get { return instance; } }
 
     private Slider dignitySlider;
+
+    public Image fillImage;
+
+    [Header("Colors")]
+
+    public Color goodColor = Color.green;
+    public Color middleColor = Color.yellow;
+    public Color dangerColor = Color.red;
+
+    [Header("Value")]
+    [Range(0, 1)]
+    public float dangerValue = 0.25f;
+    [Range(0, 1)]
+    public float middleValue = 0.5f;
 
     private void Awake()
     {
@@ -26,19 +41,46 @@ public class DignityBar : MonoBehaviour
         maxDignity = 100f;
         dignityAmount = maxDignity;
         dignitySlider = GetComponentInChildren<Slider>();
+
+        UpdateRatioSlider();
+        UpdateSliderColor();
     }
 
     public void ReduceDignity(float amount)
     {
-        dignityAmount -= amount;
+        float to = dignityAmount - amount;
+
+        DOTween.To(() => dignityAmount, x => dignityAmount = x, to, 0.5f).OnUpdate(UpdateUI).OnComplete(UpdateUI);
+
         Mathf.Clamp(dignityAmount, 0, maxDignity);
+    }
+
+    private void UpdateUI()
+    {
         UpdateRatioSlider();
+        UpdateSliderColor();
     }
 
     private void UpdateRatioSlider()
     {
         dignitySlider.value = Mathf.Clamp(dignityAmount, 0, maxDignity) / 100;
         CheckIfDead();
+    }
+
+    private void UpdateSliderColor()
+    {
+        if (dignitySlider.value <= dangerValue)
+        {
+            fillImage.DOColor(dangerColor, 1f);
+        }
+        else if (dignitySlider.value <= middleValue)
+        {
+            fillImage.DOColor(middleColor, 1f);
+        }
+        else
+        {
+            fillImage.DOColor(goodColor, 1f);
+        }
     }
 
     private void CheckIfDead()

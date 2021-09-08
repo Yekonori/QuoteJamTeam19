@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private GameManager() { }
     public static GameManager Instance { get { return instance; } }
     public CharacterMovement player;
+    public Timer timer;
     public bool canPlay = true;
 
     void Awake()
@@ -24,7 +25,8 @@ public class GameManager : MonoBehaviour
     public void Lose()
     {
         canPlay = false;
-        print("you lost.");
+
         player.StopPlayer();
+        timer.HardStopTimer();
     }
 }

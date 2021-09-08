@@ -25,6 +25,7 @@ public class Timer : MonoBehaviour
     private int shakeRandomness;
 
     private bool canCount = true;
+    private bool hardStopTimer = false;
 
     private void Start()
     {
@@ -33,7 +34,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (canCount)
+        if (canCount && !hardStopTimer)
             StartCoroutine(Count());
     }
 
@@ -46,10 +47,17 @@ public class Timer : MonoBehaviour
         canCount = false;
     }
 
+    public void HardStopTimer()
+    {
+        hardStopTimer = true;
+    }
+
     void ResetTimer(int _minuts, int _seconds)
     {
         seconds = _seconds;
         minuts = _minuts;
+
+        hardStopTimer = false;
     }
 
     public IEnumerator StartDamage()
