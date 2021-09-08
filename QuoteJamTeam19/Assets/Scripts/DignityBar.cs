@@ -31,7 +31,10 @@ public class DignityBar : MonoBehaviour
     private void Awake()
     {
         if (instance != null && instance != this)
+        {
             Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
+        }
 
         instance = this;
     }
@@ -39,11 +42,24 @@ public class DignityBar : MonoBehaviour
     private void Start()
     {
         maxDignity = 100f;
-        dignityAmount = maxDignity;
         dignitySlider = GetComponentInChildren<Slider>();
+
+        if (GameManager.Instance.DignityToSet)
+        {
+            dignityAmount = GameManager.Instance.DignityLeft;
+        }
+        else
+        {
+            dignityAmount = maxDignity;
+        }
 
         UpdateRatioSlider();
         UpdateSliderColor();
+    }
+
+    public float GetDignityValue()
+    {
+        return dignityAmount;
     }
 
     public void ReduceDignity(float amount)

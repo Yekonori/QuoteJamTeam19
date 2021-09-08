@@ -21,6 +21,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.player = this;
+
         boxcollider = GetComponent<BoxCollider2D>();
         rigidB = GetComponent<Rigidbody2D>();
         playerImg = GetComponentInChildren<SpriteRenderer>();
@@ -76,6 +78,11 @@ public class CharacterMovement : MonoBehaviour
                 StartCoroutine(SetIsSlowed(1.5f));
                 DignityBar.Instance.ReduceDignity(5f);
             }            
+        }
+
+        if(collision.gameObject.tag == "ring")
+        {
+            GameManager.Instance.GetRing();
         }
     }
 
