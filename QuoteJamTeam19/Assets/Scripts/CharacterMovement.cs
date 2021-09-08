@@ -21,6 +21,8 @@ public class CharacterMovement : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.player = this;
+
         boxcollider = GetComponent<BoxCollider2D>();
         rigidB = GetComponent<Rigidbody2D>();
         playerImg = GetComponentInChildren<SpriteRenderer>();
@@ -80,14 +82,6 @@ public class CharacterMovement : MonoBehaviour
 
         if(collision.gameObject.tag == "ring")
         {
-            /**
-             * TO DO : 
-             *      - Faire pause au timer
-             *      - Changer de scène pour passer au retour
-             *      - Redémarrer le timer et la partie
-             *      - S'assurer que la DignityBar et le Timer soit en DontDestroyOnLoad
-             */
-
             GameManager.Instance.GetRing();
         }
     }
