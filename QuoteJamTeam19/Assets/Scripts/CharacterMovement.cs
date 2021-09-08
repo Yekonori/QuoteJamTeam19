@@ -13,6 +13,7 @@ public class CharacterMovement : MonoBehaviour
     private SpriteRenderer playerImg;
     private bool isSlowed;
     private float slowSpeedValue;
+    private Animator animator;
 
     public float playerSpeed;
     public float horizontalSpeed;
@@ -23,6 +24,7 @@ public class CharacterMovement : MonoBehaviour
         boxcollider = GetComponent<BoxCollider2D>();
         rigidB = GetComponent<Rigidbody2D>();
         playerImg = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animator>();
         canRun = true;
         isSlowed = false;
     }
@@ -31,6 +33,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (canRun)
         {
+            animator.SetBool("Running", true);
             verticalSpeed = Input.GetAxis("Vertical") * playerSpeed;
 
             if (!isSlowed)
