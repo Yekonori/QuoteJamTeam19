@@ -22,6 +22,7 @@ public class CharacterMovement : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.player = this;
+        DignityBar.Instance.player = this;
 
         boxcollider = GetComponent<BoxCollider2D>();
         rigidB = GetComponent<Rigidbody2D>();
@@ -29,6 +30,8 @@ public class CharacterMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         canRun = true;
         isSlowed = false;
+
+        //SetDirty(DignityBar.Instance.GetDignityValue());
     }
 
     private void Update()
@@ -61,6 +64,10 @@ public class CharacterMovement : MonoBehaviour
                     }
                 }
         }
+        else
+        {
+            animator.SetBool("Running", false);
+        }
     }
 
     private void FixedUpdate()
@@ -91,6 +98,18 @@ public class CharacterMovement : MonoBehaviour
                 StartCoroutine(SetIsSlowed(1.5f));
                 DignityBar.Instance.ReduceDignity(5f);
             }            
+        }
+
+        if(collision.gameObject.tag == "npc")
+        {
+            StopPlayer();
+
+            NPCObstacle npc = collision.gameObject.GetComponent<NPCObstacle>();
+
+            if (npc)
+            {
+                npc.TriggerDialogue();
+            }
         }
 
         if(collision.gameObject.tag == "ring")
@@ -127,5 +146,15 @@ public class CharacterMovement : MonoBehaviour
     {
         canRun = false;
         rigidB.velocity = Vector2.zero;
+    }
+
+    public void RestartPlayer()
+    {
+        canRun = true;
+    }
+
+    public void SetDirty(float dignityAmount)
+    {
+        animator.SetFloat("Dirty", 1 - dignityAmount / 100);
     }
 }

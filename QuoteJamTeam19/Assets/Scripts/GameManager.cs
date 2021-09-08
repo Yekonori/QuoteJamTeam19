@@ -93,4 +93,9 @@ public class GameManager : MonoBehaviour
     {
         MenuManager.Instance.LoadThisScene("Win");
     }
+    
+    public void EndDialogue()
+    {
+        player.RestartPlayer();
+    }
 }
