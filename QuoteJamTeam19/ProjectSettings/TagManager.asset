@@ -6,6 +6,7 @@ TagManager:
   tags:
   - obstacle
   - ring
+  - npc
   layers:
   - Default
   - TransparentFX
