@@ -65,11 +65,13 @@ public class CharacterMovement : MonoBehaviour
             {
                 slowSpeedValue = commonObstacle.slowEffect;
                 StartCoroutine(SetIsSlowed(commonObstacle.slowDuration));
+                DignityBar.Instance.ReduceDignity(commonObstacle.dignityDamage);
             }
             else
             {
                 slowSpeedValue = 0.5f;
                 StartCoroutine(SetIsSlowed(1.5f));
+                DignityBar.Instance.ReduceDignity(5f);
             }            
         }
     }
