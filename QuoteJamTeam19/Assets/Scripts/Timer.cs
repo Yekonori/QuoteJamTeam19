@@ -27,15 +27,43 @@ public class Timer : MonoBehaviour
     private bool canCount = true;
     private bool hardStopTimer = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void Start()
     {
-        ResetTimer(minuts, seconds);
+        if (GameManager.Instance.TimerToSet)
+        {
+            minuts = GameManager.Instance.MinutsLeft;
+            seconds = GameManager.Instance.SecondsLeft;
+        }
+        else
+        {
+            ResetTimer(minuts, seconds);
+        }
+
+        if (minuts <= 0 && seconds <= 60)
+        {
+            AlertCount();
+        }
     }
 
     private void Update()
     {
         if (canCount && !hardStopTimer)
             StartCoroutine(Count());
+    }
+
+    public int GetMinuts()
+    {
+        return minuts;
+    }
+
+    public int GetSeconds()
+    {
+        return seconds;
     }
 
     void StartTimer()
@@ -62,7 +90,7 @@ public class Timer : MonoBehaviour
 
     public IEnumerator StartDamage()
     {
-        while(GameManager.Instance.canPlay)
+        while(GameManager.Instance.isGamePaused)
         {
             DignityBar.Instance.ReduceDignity(2);
             yield return new WaitForSeconds(timerSpeed);
@@ -81,10 +109,7 @@ public class Timer : MonoBehaviour
 
         if(minuts == 0 && seconds == 59)
         {
-            print("one minut left!");
-            //sound effect
-            t_Timer.DOColor(Color.red,2f);
-            t_Timer.GetComponent<RectTransform>().DOShakePosition(60f, shakeAxis, shakeVibrato, shakeRandomness, false, false);
+            AlertCount();
         }
 
         if (minuts == 0 && seconds == 0)
@@ -107,5 +132,13 @@ public class Timer : MonoBehaviour
             yield return new WaitForSeconds(timerSpeed);
             canCount = true;
         }   
+    }
+
+    private void AlertCount()
+    {
+        print("one minut left!");
+        //sound effect
+        t_Timer.DOColor(Color.red, 2f);
+        t_Timer.GetComponent<RectTransform>().DOShakePosition(60f, shakeAxis, shakeVibrato, shakeRandomness, false, false);
     }
 }

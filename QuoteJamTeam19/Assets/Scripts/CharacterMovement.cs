@@ -77,6 +77,19 @@ public class CharacterMovement : MonoBehaviour
                 DignityBar.Instance.ReduceDignity(5f);
             }            
         }
+
+        if(collision.gameObject.tag == "ring")
+        {
+            /**
+             * TO DO : 
+             *      - Faire pause au timer
+             *      - Changer de scène pour passer au retour
+             *      - Redémarrer le timer et la partie
+             *      - S'assurer que la DignityBar et le Timer soit en DontDestroyOnLoad
+             */
+
+            GameManager.Instance.GetRing();
+        }
     }
 
     private IEnumerator SetIsSlowed(float duration)
