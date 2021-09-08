@@ -52,6 +52,15 @@ public class Timer : MonoBehaviour
         minuts = _minuts;
     }
 
+    public IEnumerator StartDamage()
+    {
+        while(GameManager.Instance.canPlay)
+        {
+            DignityBar.Instance.ReduceDignity(2);
+            yield return new WaitForSeconds(timerSpeed);
+        }
+    }
+
     public IEnumerator Count()
     {
         canCount = false;
@@ -73,8 +82,8 @@ public class Timer : MonoBehaviour
         if (minuts == 0 && seconds == 0)
         {
             StopTimer();
-            GameManager.Instance.Lose();
             t_Timer.text = minuts.ToString() + ":" + "0" + seconds.ToString();
+            StartCoroutine(StartDamage());
         }
         else
         {
