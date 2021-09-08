@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
     {
         if (canRun)
         {
-            verticalSpeed = Input.GetAxis("Vertical");
+            verticalSpeed = Input.GetAxis("Vertical") * playerSpeed;
 
             if (!isSlowed)
             {
