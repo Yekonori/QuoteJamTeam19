@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public GameObject PauseMenuObject;
     public bool isGamePaused = false;
     public bool hasRing = false;
-    public bool isInSpeedMode = false;
 
     private bool dignityToSet = false;
     public bool DignityToSet { get { return dignityToSet; } }
@@ -52,15 +51,6 @@ public class GameManager : MonoBehaviour
         {
             isGamePaused = !isGamePaused;
             print(isGamePaused);
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            isInSpeedMode = true;
-        }
-        else
-        {
-            isInSpeedMode = false;
         }
 
         if (isGamePaused)

@@ -30,24 +30,28 @@ public class NPCObstacle : MonoBehaviour
         int textLength = textToSpeak.Length;
         float textSpeedRatio = textSpeed / textLength;
 
+        float speedMultiplicator = 1f;
+
         foreach (char character in textToSpeak)
         {
             dialogueText.text += character;
 
-            //if (GameManager.Instance.isInSpeedMode)
-            //{
-            //    yield return new WaitForSeconds(textSpeedRatio * 100);
-            //}
-            //else
-            //{
-            //    yield return new WaitForSeconds(textSpeedRatio);
-            //}
+            if (Input.GetButton("Jump"))
+            {
+                speedMultiplicator = 50f;
+            }
+            else
+            {
+                speedMultiplicator = 1f;
+            }
 
-            yield return new WaitForSeconds(textSpeedRatio);
+            Debug.LogError($"textSpeedRatio : {textSpeedRatio} --- speedMultiplicator : {speedMultiplicator} ---- TOTAL : {textSpeedRatio / speedMultiplicator}");
+
+            yield return new WaitForSeconds(textSpeedRatio / speedMultiplicator);
         }
 
         GameManager.Instance.EndDialogue();
         dialogueBox.SetActive(false);
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }
