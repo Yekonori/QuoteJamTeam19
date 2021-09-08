@@ -73,7 +73,6 @@ public class Timer : MonoBehaviour
         if (minuts == 0 && seconds == 0)
         {
             StopTimer();
-            GameManager.Instance.Lose();
             t_Timer.text = minuts.ToString() + ":" + "0" + seconds.ToString();
         }
         else

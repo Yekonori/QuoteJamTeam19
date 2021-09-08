@@ -49,5 +49,6 @@ public class GameManager : MonoBehaviour
     {
         print("you lost.");
         player.StopPlayer();
+        MenuManager.Instance.LoadThisScene("Loose");
     }
 }
