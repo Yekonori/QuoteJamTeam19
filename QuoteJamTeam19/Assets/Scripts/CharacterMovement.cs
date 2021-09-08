@@ -31,7 +31,7 @@ public class CharacterMovement : MonoBehaviour
         canRun = true;
         isSlowed = false;
 
-        SetDirty(DignityBar.Instance.GetDignityValue());
+        //SetDirty(DignityBar.Instance.GetDignityValue());
     }
 
     private void Update()
@@ -103,6 +103,13 @@ public class CharacterMovement : MonoBehaviour
         if(collision.gameObject.tag == "npc")
         {
             StopPlayer();
+
+            NPCObstacle npc = collision.gameObject.GetComponent<NPCObstacle>();
+
+            if (npc)
+            {
+                npc.TriggerDialogue();
+            }
         }
 
         if(collision.gameObject.tag == "ring")
@@ -139,6 +146,11 @@ public class CharacterMovement : MonoBehaviour
     {
         canRun = false;
         rigidB.velocity = Vector2.zero;
+    }
+
+    public void RestartPlayer()
+    {
+        canRun = true;
     }
 
     public void SetDirty(float dignityAmount)

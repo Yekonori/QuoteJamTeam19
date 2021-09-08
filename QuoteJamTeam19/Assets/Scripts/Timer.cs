@@ -90,7 +90,7 @@ public class Timer : MonoBehaviour
 
     public IEnumerator StartDamage()
     {
-        while(GameManager.Instance.isGamePaused)
+        while(!GameManager.Instance.isGamePaused)
         {
             DignityBar.Instance.ReduceDignity(2);
             yield return new WaitForSeconds(timerSpeed);

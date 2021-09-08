@@ -72,7 +72,7 @@ public class DignityBar : MonoBehaviour
 
         Mathf.Clamp(dignityAmount, 0, maxDignity);
 
-        player.SetDirty(dignityAmount);
+        //player.SetDirty(dignityAmount);
     }
 
     private void UpdateUI()
