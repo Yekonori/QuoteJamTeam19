@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Timer timer;
     public GameObject PauseMenuObject;
     public bool isGamePaused = false;
+    public bool hasRing = false;
 
     private bool dignityToSet = false;
     public bool DignityToSet { get { return dignityToSet; } }
@@ -80,9 +81,12 @@ public class GameManager : MonoBehaviour
         minutsLeft = timer.GetMinuts();
         secondsLeft = timer.GetSeconds();
 
+        hasRing = true;
+
         player.StopPlayer();
         // On load la scene suivante
-        MenuManager.Instance.LoadThisScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //MenuManager.Instance.LoadThisScene(SceneManager.GetActiveScene().buildIndex + 1);
+        MenuManager.Instance.LoadThisScene("GameScene2");
     }
 
     public void Victory()

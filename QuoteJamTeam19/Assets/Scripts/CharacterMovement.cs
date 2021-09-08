@@ -40,15 +40,29 @@ public class CharacterMovement : MonoBehaviour
         {
             animator.SetBool("Running", true);
             verticalSpeed = Input.GetAxis("Vertical") * playerSpeed;
-
-            if (!isSlowed)
+            if (GameManager.Instance.hasRing)
             {
-                movement = new Vector2(horizontalSpeed, verticalSpeed);
+                if (!isSlowed)
+                {
+                    movement = new Vector2(-horizontalSpeed, verticalSpeed);
+                }
+                else
+                {
+                    movement = new Vector2(-horizontalSpeed + (horizontalSpeed * slowSpeedValue), verticalSpeed - (verticalSpeed * slowSpeedValue));
+                }
             }
+                
             else
             {
-                movement = new Vector2(horizontalSpeed - (horizontalSpeed * slowSpeedValue), verticalSpeed - (verticalSpeed * slowSpeedValue));
-            }
+                    if (!isSlowed)
+                    {
+                        movement = new Vector2(horizontalSpeed, verticalSpeed);
+                    }
+                    else
+                    {
+                        movement = new Vector2(horizontalSpeed - (horizontalSpeed * slowSpeedValue), verticalSpeed - (verticalSpeed * slowSpeedValue));
+                    }
+                }
         }
         else
         {
