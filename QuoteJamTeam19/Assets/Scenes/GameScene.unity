@@ -305,7 +305,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t_Timer: {fileID: 2032110927}
-  timerSpeed: 0
+  timerSpeed: 0.8
+  minuts: 1
+  seconds: 3
+  shakeAxis: {x: 6, y: 6, z: 6}
+  shakeVibrato: 10
+  shakeRandomness: 90
 --- !u!1 &756614256
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 175, y: -125}
+  m_AnchoredPosition: {x: 190.7, y: -138}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032110927

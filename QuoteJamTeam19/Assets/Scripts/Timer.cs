@@ -2,19 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+
 
 public class Timer : MonoBehaviour
 {
     public Text t_Timer;
+    [Range(0.1f,1.5f)]
     public float timerSpeed; //1 = normal 
-    
-    private int seconds;
+
+    [SerializeField]
     private int minuts;
+    [SerializeField]
+    private int seconds;
+
+
+    [SerializeField]
+    private Vector3 shakeAxis;
+    [SerializeField]
+    private int shakeVibrato;
+    [SerializeField]
+    private int shakeRandomness;
+
     private bool canCount = true;
 
     private void Start()
     {
-        ResetTimer(0,30);
+        ResetTimer(minuts, seconds);
     }
 
     private void Update()
@@ -48,6 +62,14 @@ public class Timer : MonoBehaviour
             minuts--;
         }
 
+        if(minuts == 1 && seconds == 0)
+        {
+            print("one minut left!");
+            //sound effect
+            t_Timer.DOColor(Color.red,2f);
+            t_Timer.GetComponent<RectTransform>().DOShakePosition(60f, shakeAxis, shakeVibrato, shakeRandomness, false, false);
+        }
+
         if (minuts == 0 && seconds == 0)
         {
             StopTimer();
@@ -65,7 +87,7 @@ public class Timer : MonoBehaviour
                 t_Timer.text = minuts.ToString() + ":" + seconds.ToString();
             }
             
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(timerSpeed);
             canCount = true;
         }
 
