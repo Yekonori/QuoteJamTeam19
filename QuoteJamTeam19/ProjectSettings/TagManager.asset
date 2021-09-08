@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - obstacle
+  - ring
   layers:
   - Default
   - TransparentFX
