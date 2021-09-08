@@ -89,10 +89,6 @@ public class Timer : MonoBehaviour
             
             yield return new WaitForSeconds(timerSpeed);
             canCount = true;
-        }
-
-        
+        }   
     }
-
-
 }
