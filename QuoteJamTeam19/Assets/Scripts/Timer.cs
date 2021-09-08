@@ -79,7 +79,7 @@ public class Timer : MonoBehaviour
             minuts--;
         }
 
-        if(minuts == 1 && seconds == 0)
+        if(minuts == 0 && seconds == 59)
         {
             print("one minut left!");
             //sound effect
