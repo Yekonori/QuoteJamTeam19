@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
     {
         print("you lost.");
         player.StopPlayer();
+        MenuManager.Instance.LoadThisScene("Loose");
     }
 
     public void GetRing()
@@ -81,11 +82,11 @@ public class GameManager : MonoBehaviour
 
         player.StopPlayer();
         // On load la scene suivante
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        MenuManager.Instance.LoadThisScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Victory()
     {
-
+        MenuManager.Instance.LoadThisScene("Win");
     }
 }

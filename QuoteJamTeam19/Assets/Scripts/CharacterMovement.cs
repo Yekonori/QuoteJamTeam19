@@ -62,7 +62,6 @@ public class CharacterMovement : MonoBehaviour
         if(collision.gameObject.tag == "obstacle")
         {
             CommonObstacle commonObstacle = collision.gameObject.GetComponent<CommonObstacle>();
-
             Destroy(collision.gameObject);
             StartCoroutine(Blinker());
 
