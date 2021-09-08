@@ -79,7 +79,6 @@ public class GameManager : MonoBehaviour
         minutsLeft = timer.GetMinuts();
         secondsLeft = timer.GetSeconds();
 
-        //timer.HardStopTimer();
         player.StopPlayer();
         // On load la scene suivante
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
