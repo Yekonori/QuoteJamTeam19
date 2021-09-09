@@ -163,6 +163,6 @@ public class Timer : MonoBehaviour
     {
         gameObject.SetActive(true);
         t_Timer.DOColor(Color.white, 0f);
-        //t_Timer.GetComponent<RectTransform>().DOShakePosition(0f, Vector3.zero, 0, 0, false, false);
+        t_Timer.GetComponent<RectTransform>().DOKill();
     }
 }
