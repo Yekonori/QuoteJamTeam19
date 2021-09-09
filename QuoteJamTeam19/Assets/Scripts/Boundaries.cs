@@ -5,19 +5,12 @@ using UnityEngine;
 public class Boundaries : MonoBehaviour
 {
     private Vector2 screenBounds;
-    private float objectWidth;
     private float objectHeight;
     private Camera mainCamera;
     private Vector3 viewPos;
 
     void Start()
     {
-        if (mainCamera != Camera.main)
-        {
-            mainCamera = Camera.main;
-            Debug.Log("Camera Switched");
-        }
-        objectWidth = transform.GetComponentInChildren<SpriteRenderer>().bounds.extents.x; //extents = size of width / 2
         objectHeight = transform.GetComponentInChildren<SpriteRenderer>().bounds.extents.y; //extents = size of height / 2
     }
 
@@ -30,20 +23,9 @@ public class Boundaries : MonoBehaviour
         }
         screenBounds = mainCamera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, mainCamera.transform.position.z));
         viewPos = transform.position;
-        if (!GameManager.Instance.hasRing)
-        {
-            viewPos.x = Mathf.Clamp(viewPos.x, screenBounds.x * -1 + objectWidth, screenBounds.x - objectWidth);
-            viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
-        }
-        else
-        {
-
-        }
-        
+        viewPos.y = Mathf.Clamp(viewPos.y, screenBounds.y * -1 + objectHeight, screenBounds.y - objectHeight);
         transform.position = viewPos;
     }
-
-
 
     private void OnDrawGizmos()
     {
