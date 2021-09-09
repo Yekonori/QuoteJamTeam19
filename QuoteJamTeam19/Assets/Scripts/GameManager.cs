@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public bool isGamePaused = false;
     public bool hasRing = false;
 
+    public DignityBar dignityBar;
+
     private bool dignityToSet = false;
     public bool DignityToSet { get { return dignityToSet; } }
 
@@ -36,6 +38,11 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
+        }
+
+        if (instance != this)
+        {
+            Destroy(gameObject);
         }
 
         if (player == null)
@@ -92,5 +99,33 @@ public class GameManager : MonoBehaviour
     public void Victory()
     {
         MenuManager.Instance.LoadThisScene("Win");
+    }
+    
+    public void EndDialogue()
+    {
+        player.RestartPlayer();
+    }
+
+    public void StartParty()
+    {
+        PauseMenuObject.SetActive(false);
+
+        timer.StartTimerParty();
+
+        dignityBar.gameObject.SetActive(true);
+    }
+
+    public void QuitParty()
+    {
+        if (dignityBar != null)
+        {
+            dignityBar.Hide();
+        }
+
+        timer.gameObject.SetActive(false);
+        timer.HardResetTimer();
+
+        isGamePaused = false;
+        PauseMenuObject.SetActive(false);
     }
 }

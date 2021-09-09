@@ -16,6 +16,8 @@ public class DignityBar : MonoBehaviour
 
     public Image fillImage;
 
+    public CharacterMovement player;
+
     [Header("Colors")]
 
     public Color goodColor = Color.green;
@@ -30,13 +32,11 @@ public class DignityBar : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
+        if (instance == null)
         {
-            Destroy(gameObject);
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-        instance = this;
     }
 
     private void Start()
@@ -69,6 +69,8 @@ public class DignityBar : MonoBehaviour
         DOTween.To(() => dignityAmount, x => dignityAmount = x, to, 0.5f).OnUpdate(UpdateUI).OnComplete(UpdateUI);
 
         Mathf.Clamp(dignityAmount, 0, maxDignity);
+
+        //player.SetDirty(dignityAmount);
     }
 
     private void UpdateUI()
@@ -105,5 +107,24 @@ public class DignityBar : MonoBehaviour
         {
             GameManager.Instance.Lose();
         }
+    }
+
+    private void HardResetDignity()
+    {
+        gameObject.SetActive(true);
+
+        maxDignity = 100f;
+        dignitySlider = GetComponentInChildren<Slider>();
+
+        dignityAmount = maxDignity;
+
+        UpdateRatioSlider();
+        UpdateSliderColor();
+    }
+
+    public void Hide()
+    {
+       HardResetDignity();
+       gameObject.SetActive(false);
     }
 }
