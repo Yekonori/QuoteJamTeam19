@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.26282415, g: 0.7735849, b: 0.054004956, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8147469302366172405}
   - component: {fileID: 5677145911846767954}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Fleurs
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -176,5 +176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6ab1ee8ee5fd7418f0d07e879d866d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowDuration: 1
+  slowDuration: 2
   slowEffect: 0.5
+  dignityDamage: 5

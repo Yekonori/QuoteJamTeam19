@@ -561,21 +561,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeed: 9
-  textToSpeak: "Comment allez vous ? C\u2019est votre mariage apr\xE8s tout, c\u2019est
-    un \xE9v\xE9nement magique qui, esp\xE9rons, ne se produit qu\u2019une fois dans
-    sa vie. Ce jour doit \xEAtre parfait, il l\u2019est d\xE9j\xE0 pour moi, quelle
-    bonheur de voir l\u2019union de deux si belles personnes ensembles. Franchement
-    je suis au anges, jamais je n\u2019aurais pensez qu\u2019il aurait le courage
-    de te demander en Marie Age je veux dire qui voudrais d\u2019un nom de famille
-    comme Deuf et un nom comme John \xE7a sonne un peu comme jaune d\u2019oeuf non
-    ? M\xEAme si toi t\u2019a pas \xE9t\xE9 gat\xE9 non plus comme tu t\u2019appelle
-    Anna Nace. Mais bon au moins vous ne serrez pas comme ma ni\xE9ce, la pauvre,
-    ses parents l\u2019ont app\xE9l\xE9 Lara mais avec un nom de famille comme Pafromage
-    c\u2019est pas facile tout le jours. Moi, le marriage tr\xE9s peu pour moi je
-    n\u2019ai pas trouv\xE9 la bonne personne et je ne pr\xE9f\xE9re pas m\u2019embarqu\xE9
-    dans cette aventure tout de suite, c\u2019est bien trop risqu\xE9. Apr\xE8s tout
-    je ne m\u2019appelle pas Iris Keurien pour rien j\u2019ai des valeurs et des
-    morales \xE0 transmettre moi surtout a mon cousin, Maxime Homme qui adore d\xE9passer
-    ses limites et mettre sa vie en danger"
+  textToSpeak: Hi.
   dialogueBox: {fileID: 2360234139522227095}
   dialogueText: {fileID: 1495315541052706563}

@@ -393,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8824035480410397573}
   - component: {fileID: 8824035480410397574}
+  - component: {fileID: 5419400572380104004}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -465,6 +466,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &5419400572380104004
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824035480410397572}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8824035481600084427
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +497,6 @@ GameObject:
   - component: {fileID: 8824035481600084437}
   - component: {fileID: 8824035481600084438}
   - component: {fileID: 7462548967602173082}
-  - component: {fileID: 482531856427263023}
   m_Layer: 0
   m_Name: Child_NPC
   m_TagString: npc
@@ -567,29 +586,10 @@ MonoBehaviour:
     A LITTLE REWARD AND IM BORED SO PLEASE LET ME BORROW IT !! I ALSO WANNA KNOW
     IF YOU HAVE FORTNITE ? DO YOU HAVE IT ? I LOVE FORTNITE ITS THE BEST GAME EVER
     !!! ALSO IM THE BEST PLAYER EVER, EACH TIME I ALWAYS WIN AND GET A VICTORY ROYALE
-    I HAVE NEVER LOST !!!!  DO YOU HAVE ROBUX ON YOUR ACCOUNT ? DO YOU ? CAUSE I
-    USED MY MOMS CREDIT CARD TO GET SOME AND NOW I HAVE TONS OF ROBUX, SO MUCH IN
-    FACT I MANAGED TO GET EVERY SKIN IN THE GAME !!! BANANA MAN IS MY FAVORITE SKIN
-    HE LOOKS SOO FUNNY !!!! SO YOU SEE IM TRULY THE BEST FORTNITE PLAYER EVER SO
-    CAN I USE YOUR PHONE TO PLAY ?
+    I HAVE NEVER LOST !!!!  DO YOU HAVE VBUX ON YOUR ACCOUNT ? DO YOU ? CAUSE I USED
+    MY MOMS CREDIT CARD TO GET SOME AND NOW I HAVE TONS OF ROBUX, SO MUCH IN FACT
+    I MANAGED TO GET EVERY SKIN IN THE GAME !!! BANANA MAN IS MY FAVORITE SKIN HE
+    LOOKS SOO FUNNY !!!! SO YOU SEE IM TRULY THE BEST FORTNITE PLAYER EVER SO CAN
+    I USE YOUR PHONE TO PLAY ?
   dialogueBox: {fileID: 2360234139522227095}
   dialogueText: {fileID: 1495315541052706563}
---- !u!95 &482531856427263023
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8824035481600084427}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
