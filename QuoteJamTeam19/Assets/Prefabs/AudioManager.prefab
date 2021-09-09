@@ -46,68 +46,68 @@ MonoBehaviour:
   sounds:
   - name: title_screen
     clip: {fileID: 8300000, guid: cdd3ba5a36e6a29428e5a8989de18b9d, type: 3}
-    volume: 0
+    volume: 1
     loop: 1
     source: {fileID: 0}
     type: 0
   - name: game_over
     clip: {fileID: 8300000, guid: 46fcdf8db37fd4b4f8870817be4951ea, type: 3}
-    volume: 0
-    loop: 0
+    volume: 1
+    loop: 1
     source: {fileID: 0}
     type: 0
   - name: car_beep
     clip: {fileID: 8300000, guid: 8e9a83290df881143b947c8b0bf14458, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: female_sigh
     clip: {fileID: 8300000, guid: f6366a6370c775048acf39b3acc9c598, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: female_woaow
     clip: {fileID: 8300000, guid: 942826ff2dcd65c45982fd6367601c5a, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: handbell_ring
     clip: {fileID: 8300000, guid: 6299ff6d5f4b5a049bf69bf9650b7859, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: hit_obstacle
     clip: {fileID: 8300000, guid: 02232c815959e164690414828724cbe0, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: male_ah
     clip: {fileID: 8300000, guid: be8ccbc7925f7664bb7559ea9f3f7963, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: radio_beep
     clip: {fileID: 8300000, guid: 17f13e5d4d93d404e968c87bb1c47805, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: skateboard
     clip: {fileID: 8300000, guid: e3c52d07e32105e45a25d4f654c791cc, type: 3}
-    volume: 0
+    volume: 1
     loop: 0
     source: {fileID: 0}
     type: 1
   - name: victory
     clip: {fileID: 8300000, guid: bb6bd1a1422c78144a3391157bbe5e48, type: 3}
-    volume: 0
-    loop: 0
+    volume: 1
+    loop: 1
     source: {fileID: 0}
     type: 1
   musicVolume: 0.5
