@@ -47,7 +47,7 @@ MonoBehaviour:
   - name: title_screen
     clip: {fileID: 8300000, guid: cdd3ba5a36e6a29428e5a8989de18b9d, type: 3}
     volume: 0
-    loop: 0
+    loop: 1
     source: {fileID: 0}
     type: 0
   - name: game_over

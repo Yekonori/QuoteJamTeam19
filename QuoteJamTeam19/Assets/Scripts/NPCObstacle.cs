@@ -59,6 +59,7 @@ public class NPCObstacle : MonoBehaviour
         {
             speedMultiplicator = 50f;
             canSpeed = false;
+            AudioManager.instance.Play("radio_beep");
 
             yield return new WaitForSeconds(1f);
 

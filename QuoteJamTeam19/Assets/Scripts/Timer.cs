@@ -153,6 +153,7 @@ public class Timer : MonoBehaviour
 
     private void AlertCount()
     {
+        AudioManager.instance.Play("handbell_ring");
         print("one minut left!");
         //sound effect
         t_Timer.DOColor(Color.red, 2f);
