@@ -78,6 +78,7 @@ public class GameManager : MonoBehaviour
 
     public void Lose()
     {
+        QuitParty();
         print("you lost.");
         player.StopPlayer();
         MenuManager.Instance.LoadThisScene("Loose");
