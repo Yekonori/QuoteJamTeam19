@@ -82,6 +82,7 @@ public class GameManager : MonoBehaviour
         print("you lost.");
         player.StopPlayer();
         MenuManager.Instance.LoadThisScene("Loose");
+        AudioManager.instance.Play("game_over");
     }
 
     public void GetRing()

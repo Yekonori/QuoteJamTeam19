@@ -18,6 +18,11 @@ public class MenuManager : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        AudioManager.instance.Play("title_screen");    
+    }
+
     public void OpenTutorial()
     {
         tutorial.SetActive(true);

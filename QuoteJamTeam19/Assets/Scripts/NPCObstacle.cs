@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+public enum NPCEnumType
+{
+    gothic,
+    grandMa,
+    friend,
+    child
+}
 public class NPCObstacle : MonoBehaviour
 {
     public float textDuration = 1f;
@@ -16,6 +23,7 @@ public class NPCObstacle : MonoBehaviour
     private float speedMultiplicator = 1f;
     private bool canSpeed = true;
     private float speedCD = 2f;
+    public NPCEnumType NPCtype;
 
     private void Awake()
     {
@@ -28,6 +36,20 @@ public class NPCObstacle : MonoBehaviour
     {
         dialogueBox.SetActive(true);
         StartCoroutine(StartSpeaking());
+        switch (NPCtype)
+        {
+            case NPCEnumType.gothic:
+                AudioManager.instance.Play("female_sigh");
+                break;
+            case NPCEnumType.grandMa:
+                AudioManager.instance.Play("female_woaow");
+                break;
+            case NPCEnumType.friend:
+                AudioManager.instance.Play("male_ah");
+                break;
+            case NPCEnumType.child:
+                break;
+        }
     }
 
     private IEnumerator StartSpeaking()
@@ -59,6 +81,7 @@ public class NPCObstacle : MonoBehaviour
         {
             speedMultiplicator = 50f;
             canSpeed = false;
+            AudioManager.instance.Play("radio_beep");
 
             yield return new WaitForSeconds(1f);
 
