@@ -393,7 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8824035480410397573}
   - component: {fileID: 8824035480410397574}
-  - component: {fileID: 6132074217109412021}
+  - component: {fileID: 9166574821509508116}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -455,7 +455,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3327832880683285359, guid: 891581ea0fb6aa047a75cd86ba49e98c,
+  m_Sprite: {fileID: 2150732810926678814, guid: 5aa7cd28d1cbe0849a262f27d406ff49,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -467,7 +467,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6132074217109412021
+--- !u!95 &9166574821509508116
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ Animator:
   m_GameObject: {fileID: 8824035480410397572}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 647d3cba72e52f24980cbb3e6e9b639a, type: 2}
+  m_Controller: {fileID: 9100000, guid: de437a77df312cf439ab6e427ccbabfa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 8824035481600084438}
   - component: {fileID: 7462548967602173082}
   m_Layer: 0
-  m_Name: Friend_NPC
+  m_Name: Goth_NPC
   m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,7 +534,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.006348133, y: -0.012696266}
+  m_Offset: {x: -0.01057446, y: -0.004243374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -545,7 +545,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0507846, y: 2.1553555}
+  m_Size: {x: 0.7887496, y: 1.9693952}
   m_EdgeRadius: 0
 --- !u!50 &8824035481600084438
 Rigidbody2D:
@@ -581,21 +581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textSpeed: 12
-  textToSpeak: "How are you ? it is your marriage after all, it\u2019s supposed to
-    be a once in a lifetime event (and let\u2019s hope it stays that way for you).
-    This day has to be perfect, I mean for me it already is since I get to witness
-    the union between my best friend and her handsome lover. Although I have to admit
-    I never would have imagined that your soon to be husband Ali Egater would have
-    the guts to propose since he is usually really shy but i\u2019m really glad it
-    ended up working out even if you have got to admit that he has a funny a name,
-    seriousy don\u2019t you think it sounds like alligator ? Well it\u2019s not like
-    you got lucky on the name lottery either with name like Arty Fischel, seriously
-    what were your parents even thinking when they named you ? In any case nothing
-    can ever be as bad as the name my sister choose for her daughter : Kay Oss. The
-    poor kid is soo sweet but I bet it\u2019s not easy everyday to bear that name.
-    As for me, I don\u2019t think I will ever get married, marriages are too much
-    trouble and I haven\u2019t found the right person yet although I\u2019ve been
-    attending Professor Horace Cope lectures frequently. What a handsome young man. 
-    \r"
+  textToSpeak: "H\u2026...E\u2026..Y."
   dialogueBox: {fileID: 2360234139522227095}
   dialogueText: {fileID: 1495315541052706563}
