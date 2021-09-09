@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5944721575669917466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5944721575669917464}
+  - component: {fileID: 5944721575669917465}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5944721575669917464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944721575669917466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5944721575669917465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5944721575669917466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2dcddc3d427f34fbe0a2f9cd4d275e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: title_screen
+    clip: {fileID: 8300000, guid: cdd3ba5a36e6a29428e5a8989de18b9d, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 0
+  - name: game_over
+    clip: {fileID: 8300000, guid: 46fcdf8db37fd4b4f8870817be4951ea, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 0
+  - name: car_beep
+    clip: {fileID: 8300000, guid: 8e9a83290df881143b947c8b0bf14458, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: female_sigh
+    clip: {fileID: 8300000, guid: f6366a6370c775048acf39b3acc9c598, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: female_woaow
+    clip: {fileID: 8300000, guid: 942826ff2dcd65c45982fd6367601c5a, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: handbell_ring
+    clip: {fileID: 8300000, guid: 6299ff6d5f4b5a049bf69bf9650b7859, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: hit_obstacle
+    clip: {fileID: 8300000, guid: 02232c815959e164690414828724cbe0, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: male_ah
+    clip: {fileID: 8300000, guid: be8ccbc7925f7664bb7559ea9f3f7963, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: radio_beep
+    clip: {fileID: 8300000, guid: 17f13e5d4d93d404e968c87bb1c47805, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: skateboard
+    clip: {fileID: 8300000, guid: e3c52d07e32105e45a25d4f654c791cc, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  - name: victory
+    clip: {fileID: 8300000, guid: bb6bd1a1422c78144a3391157bbe5e48, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
+  musicVolume: 0.5
+  effectVolume: 0.5
+  MSlider: {fileID: 0}
+  ESlider: {fileID: 0}
