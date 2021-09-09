@@ -116,6 +116,10 @@ public class CharacterMovement : MonoBehaviour
         {
             GameManager.Instance.GetRing();
         }
+        if (collision.gameObject.tag == "Finish")
+        {
+            GameManager.Instance.Victory();
+        }
     }
 
     private IEnumerator SetIsSlowed(float duration)

@@ -98,6 +98,7 @@ public class GameManager : MonoBehaviour
 
     public void Victory()
     {
+        QuitParty();
         MenuManager.Instance.LoadThisScene("Win");
     }
     
