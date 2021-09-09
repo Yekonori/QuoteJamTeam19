@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152146acdbab82c4cb4bc58d41f91a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 9
+  textDuration: 1
   textToSpeak: Hey ? HEY ? HEEEEEEEEEEEEEEEEEEEEEEEEEY ? DO YOU HAVE GAMES ON YOUR
     PHONES ? DO YOU HAVE ANY GAMES, IT BETTER NOT BE SOMETHING LAME LIKE CANDY CRUSH
     ? PLEASE CAN I USE YOUR PHONE TO PLAY GAMES ? YOU KNOW SINCE IM SO POLITE I DESERVE
@@ -593,3 +593,4 @@ MonoBehaviour:
     I USE YOUR PHONE TO PLAY ?
   dialogueBox: {fileID: 2360234139522227095}
   dialogueText: {fileID: 1495315541052706563}
+  NPCtype: 3
