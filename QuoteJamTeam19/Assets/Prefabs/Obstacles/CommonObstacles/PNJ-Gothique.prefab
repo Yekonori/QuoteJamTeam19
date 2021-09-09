@@ -178,4 +178,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slowDuration: 1
   slowEffect: 0.5
-  dignityDamage: 0
+  dignityDamage: 5
