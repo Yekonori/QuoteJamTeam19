@@ -7,5 +7,6 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.StartParty();
+        AudioManager.instance.Play("skateboard");
     }
 }
