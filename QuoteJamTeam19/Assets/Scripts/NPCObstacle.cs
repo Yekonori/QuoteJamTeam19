@@ -45,13 +45,12 @@ public class NPCObstacle : MonoBehaviour
                 speedMultiplicator = 1f;
             }
 
-            Debug.LogError($"textSpeedRatio : {textSpeedRatio} --- speedMultiplicator : {speedMultiplicator} ---- TOTAL : {textSpeedRatio / speedMultiplicator}");
-
             yield return new WaitForSeconds(textSpeedRatio / speedMultiplicator);
         }
 
         GameManager.Instance.EndDialogue();
         dialogueBox.SetActive(false);
+        gameObject.SetActive(false);
         Destroy(this.gameObject);
     }
 }

@@ -110,4 +110,23 @@ public class DignityBar : MonoBehaviour
             GameManager.Instance.Lose();
         }
     }
+
+    private void HardResetDignity()
+    {
+        gameObject.SetActive(true);
+
+        maxDignity = 100f;
+        dignitySlider = GetComponentInChildren<Slider>();
+
+        dignityAmount = maxDignity;
+
+        UpdateRatioSlider();
+        UpdateSliderColor();
+    }
+
+    public void Hide()
+    {
+       HardResetDignity();
+       gameObject.SetActive(false);
+    }
 }

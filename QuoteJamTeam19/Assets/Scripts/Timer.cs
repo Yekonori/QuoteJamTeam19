@@ -27,6 +27,11 @@ public class Timer : MonoBehaviour
     private bool canCount = true;
     private bool hardStopTimer = false;
 
+    private int hardMinuts;
+    private int hardSeconds;
+
+    private bool needHardSet = true;
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -34,6 +39,9 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        hardMinuts = minuts;
+        hardSeconds = seconds;
+
         if (GameManager.Instance.TimerToSet)
         {
             minuts = GameManager.Instance.MinutsLeft;
@@ -88,6 +96,15 @@ public class Timer : MonoBehaviour
         hardStopTimer = false;
     }
 
+    public void HardResetTimer()
+    {
+        t_Timer.DOKill();
+
+        ResetTimer(hardMinuts, hardSeconds);
+
+        canCount = true;
+    }
+
     public IEnumerator StartDamage()
     {
         while(!GameManager.Instance.isGamePaused)
@@ -140,5 +157,12 @@ public class Timer : MonoBehaviour
         //sound effect
         t_Timer.DOColor(Color.red, 2f);
         t_Timer.GetComponent<RectTransform>().DOShakePosition(60f, shakeAxis, shakeVibrato, shakeRandomness, false, false);
+    }
+
+    public void StartTimerParty()
+    {
+        gameObject.SetActive(true);
+        t_Timer.DOColor(Color.white, 0f);
+        //t_Timer.GetComponent<RectTransform>().DOShakePosition(0f, Vector3.zero, 0, 0, false, false);
     }
 }
