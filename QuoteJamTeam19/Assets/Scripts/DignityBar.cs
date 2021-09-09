@@ -32,13 +32,11 @@ public class DignityBar : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != null && instance != this)
+        if (instance == null)
         {
-            Destroy(gameObject);
+            instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-        instance = this;
     }
 
     private void Start()
