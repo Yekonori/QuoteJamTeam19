@@ -54,12 +54,16 @@ public class GameManager : MonoBehaviour
 
      void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "MainMenu" && SceneManager.GetActiveScene().name != "Win" && SceneManager.GetActiveScene().name != "Loose")
         {
-            isGamePaused = !isGamePaused;
-            print(isGamePaused);
+            SetPause();
         }
+    }
 
+    public void SetPause()
+    {
+        isGamePaused = !isGamePaused;
+        print(isGamePaused);
         if (isGamePaused)
         {
             Time.timeScale = 0;
