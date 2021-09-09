@@ -114,6 +114,8 @@ public class GameManager : MonoBehaviour
         timer.StartTimerParty();
 
         dignityBar.gameObject.SetActive(true);
+
+        hasRing = false;
     }
 
     public void QuitParty()
@@ -128,5 +130,7 @@ public class GameManager : MonoBehaviour
 
         isGamePaused = false;
         PauseMenuObject.SetActive(false);
+
+        hasRing = false;
     }
 }
