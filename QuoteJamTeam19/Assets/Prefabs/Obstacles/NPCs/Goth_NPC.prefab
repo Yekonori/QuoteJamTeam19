@@ -454,7 +454,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a3f0e864b5d31b8449f53b32dfecca2a, type: 3}
+  m_Sprite: {fileID: 2150732810926678814, guid: 5aa7cd28d1cbe0849a262f27d406ff49,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -477,9 +478,9 @@ GameObject:
   - component: {fileID: 8824035481600084437}
   - component: {fileID: 8824035481600084438}
   - component: {fileID: 7462548967602173082}
-  - component: {fileID: 482531856427263023}
+  - component: {fileID: 1410529066219459634}
   m_Layer: 0
-  m_Name: Child_NPC
+  m_Name: Goth_NPC
   m_TagString: npc
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,7 +515,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0072356462, y: -0.0048237443}
+  m_Offset: {x: -0.01057446, y: -0.004243374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -525,7 +526,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.618922, y: 1.1254181}
+  m_Size: {x: 0.7887496, y: 1.9693952}
   m_EdgeRadius: 0
 --- !u!50 &8824035481600084438
 Rigidbody2D:
@@ -560,21 +561,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152146acdbab82c4cb4bc58d41f91a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textSpeed: 9
-  textToSpeak: Hey ? HEY ? HEEEEEEEEEEEEEEEEEEEEEEEEEY ? DO YOU HAVE GAMES ON YOUR
-    PHONES ? DO YOU HAVE ANY GAMES, IT BETTER NOT BE SOMETHING LAME LIKE CANDY CRUSH
-    ? PLEASE CAN I USE YOUR PHONE TO PLAY GAMES ? YOU KNOW SINCE IM SO POLITE I DESERVE
-    A LITTLE REWARD AND IM BORED SO PLEASE LET ME BORROW IT !! I ALSO WANNA KNOW
-    IF YOU HAVE FORTNITE ? DO YOU HAVE IT ? I LOVE FORTNITE ITS THE BEST GAME EVER
-    !!! ALSO IM THE BEST PLAYER EVER, EACH TIME I ALWAYS WIN AND GET A VICTORY ROYALE
-    I HAVE NEVER LOST !!!!  DO YOU HAVE ROBUX ON YOUR ACCOUNT ? DO YOU ? CAUSE I
-    USED MY MOMS CREDIT CARD TO GET SOME AND NOW I HAVE TONS OF ROBUX, SO MUCH IN
-    FACT I MANAGED TO GET EVERY SKIN IN THE GAME !!! BANANA MAN IS MY FAVORITE SKIN
-    HE LOOKS SOO FUNNY !!!! SO YOU SEE IM TRULY THE BEST FORTNITE PLAYER EVER SO
-    CAN I USE YOUR PHONE TO PLAY ?
+  textSpeed: 12
+  textToSpeak: "H\u2026...E\u2026..Y."
   dialogueBox: {fileID: 2360234139522227095}
   dialogueText: {fileID: 1495315541052706563}
---- !u!95 &482531856427263023
+--- !u!95 &1410529066219459634
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -584,7 +575,7 @@ Animator:
   m_GameObject: {fileID: 8824035481600084427}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de437a77df312cf439ab6e427ccbabfa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
