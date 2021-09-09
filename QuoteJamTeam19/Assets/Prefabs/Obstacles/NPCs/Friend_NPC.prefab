@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 8824035481600084437}
   - component: {fileID: 8824035481600084438}
   - component: {fileID: 7462548967602173082}
+  - component: {fileID: 1410529066219459634}
   m_Layer: 0
   m_Name: Friend_NPC
   m_TagString: npc
@@ -579,3 +580,22 @@ MonoBehaviour:
     \r"
   dialogueBox: {fileID: 2360234139522227095}
   dialogueText: {fileID: 1495315541052706563}
+--- !u!95 &1410529066219459634
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824035481600084427}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 647d3cba72e52f24980cbb3e6e9b639a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
