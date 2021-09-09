@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6230304809417189004, guid: 1b3cba53f2270a6488e22102222dd75c,
+  m_Sprite: {fileID: 5248816159337712306, guid: 186089cfd671034438c1438304d25b0a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 8147469302366172405}
   - component: {fileID: 5677145911846767954}
   m_Layer: 0
-  m_Name: Skateboard
+  m_Name: Voiture 3
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01287818, y: 0.0017675608}
+  m_Offset: {x: 0.0041726828, y: -0.027258456}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -141,7 +141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.0779109, y: 0.20831034}
+  m_Size: {x: 0.5454619, y: 0.25940704}
   m_EdgeRadius: 0
 --- !u!50 &8147469302366172405
 Rigidbody2D:
