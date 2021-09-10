@@ -115,6 +115,8 @@ public class GameManager : MonoBehaviour
 
     public void StartParty()
     {
+        AudioManager.instance.StopPlayAll();
+
         PauseMenuObject.SetActive(false);
 
         timer.StartTimerParty();
