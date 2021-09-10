@@ -100,6 +100,89 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &2189475881252260230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498340539766686498}
+  - component: {fileID: 3113593245901522902}
+  m_Layer: 0
+  m_Name: Finish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &498340539766686498
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189475881252260230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8824035481600084436}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3113593245901522902
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189475881252260230}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2360234139522227095
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8810776673001303437
 RectTransform:
   m_ObjectHideFlags: 0
@@ -283,7 +366,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NEW
+  m_text: Hey ? HEY ? HEEEEEEEEEEEEEEEEEEEEEEEEEY ? DO YOU HAVE GAMES ON YOUR PHONES
+    ? DO YOU HAVE ANY GAMES, IT BETTER NOT BE SOMETHING LAME LIKE CANDY CRUSH ? PLEASE
+    CAN I USE YOUR PHONE TO PLAY GAMES ? YOU KNOW SINCE IM SO POLITE I DESERVE A
+    LITTLE REWARD AND IM BORED SO PLEASE LET ME BORROW IT !! I ALSO WANNA KNOW IF
+    YOU HAVE FORTNITE ? DO YOU HAVE IT ? I LOVE FORTNITE ITS THE BEST GAME EVER !!!
+    ALSO IM THE BEST PLAYER EHVeEyR ,?  EHAHECeYHy   ?T? I HMHEEEE YEI E ?EA ELHEWEEAEEYEESEE
+    EEWEEIEENEE EEAEENEEDEE EEGEEEEETEE EEAEE EYVE IE?CE TEDOEORE YYY  OR?UO  YDHAOAL
+    VEYE O IUG  AHHMAAEVVSEE   ONGNEA VMYEEORSU  RLO ONPS HTYO ON!UE!RS!  !P? H 
+    ODDNOOE  SYY OO?UU   DHHOAA VVYEEO  UAV NBHYUA XVG EAO MNAE NSYY,O  UGIRAT M
+    AEBCSEC,TO TUIENTRT   BN?EO TTDT OEB REY  ONSUOO TM? E BTCEHA IUSNSOGEM  ELITA
+    HMUIESN EGLD I LKMAEYM  ECM AOLNMIDSKY E C CRCREAUDNSIDHTY   ?CC ARPRULDSE HAT
+    SO?E   GPCELATEN A SSIOE M UECS AEAN N YDIO  UNUROS WEP  HIYO ONHUEAR V TEPO
+    H TOPONLNEAS Y T OOGF A PMRLEOASBY U ?XG ,AY MOSEUOS   KM?NU OCYWHO  USI INKN
+    NCFOEAW C ITSM I INS COME A PNIOAMLG IESTDOE   TPIOO  LDGIEETSTEE  REIVV EED
+    REAYS  ELSRIKVTIETN L AEI  NLR IETTWHTAELR EDG  ARAMENEWD A !RI!DM!   ABBNOADRN
+    EAIDNM A S BOMO ARPNEL DEI ASSS OEM  YPL LEFETAA VSMOEER  ILBTEOETR  RSMOKEWI 
+    NBI OTHR ER! O!LW O IOI KTAS L !SS!OO  OIW  AFANULNNSANO Y K WN!AO!NW!N !AI 
+    FSK ONY OOYWUO  UIH FAS VEYEEO  UFI OMHR ATTVNREIU TLFEYO  R?TT HNDEIO T BEYE
+    OS?UT   DHFOAO VRYETO NUII TTH EA? V PEIL  AILYTOE VR?E   EIFV OELRROT VNSEIO
+    T FECO ARINTT NSII  TTUEHS EEI  TBYSEO SUTTRH  EGP AHBMOEENS ETE  VTGEOAR M PE!L
+    !AE!YV  EA?RL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -393,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8824035480410397573}
   - component: {fileID: 8824035480410397574}
-  - component: {fileID: 6132074217109412021}
+  - component: {fileID: 5419400572380104004}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -454,8 +557,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 3327832880683285359, guid: 891581ea0fb6aa047a75cd86ba49e98c,
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -6230304809417189004, guid: 1b3cba53f2270a6488e22102222dd75c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -467,7 +570,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6132074217109412021
+--- !u!95 &5419400572380104004
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -477,7 +580,7 @@ Animator:
   m_GameObject: {fileID: 8824035480410397572}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 647d3cba72e52f24980cbb3e6e9b639a, type: 2}
+  m_Controller: {fileID: 9100000, guid: dac4d9803aa5f094d8ae5c3b93e53f00, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -497,10 +600,10 @@ GameObject:
   - component: {fileID: 8824035481600084436}
   - component: {fileID: 8824035481600084437}
   - component: {fileID: 8824035481600084438}
-  - component: {fileID: 7462548967602173082}
+  - component: {fileID: 2332043712661100382}
   m_Layer: 0
-  m_Name: Friend_NPC
-  m_TagString: npc
+  m_Name: SkateboardObstacle
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,6 +621,7 @@ Transform:
   m_Children:
   - {fileID: 8824035480410397573}
   - {fileID: 7880742572169225033}
+  - {fileID: 498340539766686498}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,7 +638,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03406012, y: -0.07011855}
+  m_Offset: {x: -0.0072356462, y: -0.0048237443}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -545,7 +649,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.50208306, y: 1.7002308}
+  m_Size: {x: 0.618922, y: 1.1254181}
   m_EdgeRadius: 0
 --- !u!50 &8824035481600084438
 Rigidbody2D:
@@ -568,7 +672,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &7462548967602173082
+--- !u!114 &2332043712661100382
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -577,26 +681,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8824035481600084427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152146acdbab82c4cb4bc58d41f91a0d, type: 3}
+  m_Script: {fileID: 11500000, guid: c5ac682d448b4c541a690ec5b0f8df59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDuration: 1
-  textToSpeak: "How are you ? it is your marriage after all, it\u2019s supposed to
-    be a once in a lifetime event (and let\u2019s hope it stays that way for you).
-    This day has to be perfect, I mean for me it already is since I get to witness
-    the union between my best friend and her handsome lover. Although I have to admit
-    I never would have imagined that your soon to be husband Ali Egater would have
-    the guts to propose since he is usually really shy but i\u2019m really glad it
-    ended up working out even if you have got to admit that he has a funny a name,
-    seriousy don\u2019t you think it sounds like alligator ? Well it\u2019s not like
-    you got lucky on the name lottery either with name like Arty Fischel, seriously
-    what were your parents even thinking when they named you ? In any case nothing
-    can ever be as bad as the name my sister choose for her daughter : Kay Oss. The
-    poor kid is soo sweet but I bet it\u2019s not easy everyday to bear that name.
-    As for me, I don\u2019t think I will ever get married, marriages are too much
-    trouble and I haven\u2019t found the right person yet although I\u2019ve been
-    attending Professor Horace Cope lectures frequently. What a handsome young man. 
-    \r"
-  dialogueBox: {fileID: 2360234139522227095}
-  dialogueText: {fileID: 1495315541052706563}
-  NPCtype: 2
+  bDest: {fileID: 2189475881252260230}
+  speed: 10
+  delayBeforeGoingBack: 1
+  randomDelayStrenght: 0.1
+  animator: {fileID: 5419400572380104004}
