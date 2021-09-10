@@ -137,8 +137,6 @@ public class GameManager : MonoBehaviour
         isGamePaused = false;
         PauseMenuObject.SetActive(false);
 
-        hasRing = false;
-
         AudioManager.instance.StopPlayAll();
     }
 }

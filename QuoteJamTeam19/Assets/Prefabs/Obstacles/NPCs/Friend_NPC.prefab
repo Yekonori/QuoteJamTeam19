@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152146acdbab82c4cb4bc58d41f91a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDuration: 1
+  textDuration: 20
   textToSpeak: "How are you ? it is your marriage after all, it\u2019s supposed to
     be a once in a lifetime event (and let\u2019s hope it stays that way for you).
     This day has to be perfect, I mean for me it already is since I get to witness

@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152146acdbab82c4cb4bc58d41f91a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textDuration: 1
+  textDuration: 40
   textToSpeak: "OOOOOOOH sweetie how are you doing ? Its been so long since you last
     came to visit I\u2019m so happy to see you !! I hope your doing well because
     today is your marriage after all, a day you will remember for the rest of your
