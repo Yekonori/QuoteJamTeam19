@@ -26049,12 +26049,12 @@ PrefabInstance:
     - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
         type: 3}
       propertyPath: minuts
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
         type: 3}
       propertyPath: seconds
-      value: 0
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4366204862115662225, guid: 3a6fe606d6f21264b90de246e6fe98ce,
         type: 3}
