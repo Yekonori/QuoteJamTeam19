@@ -20501,22 +20501,22 @@ PrefabInstance:
     - target: {fileID: 1383315809886104819, guid: 947a199302ad1d948bd5f42894294578,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.5485177
+      value: 0.8248012
       objectReference: {fileID: 0}
     - target: {fileID: 1383315809886104819, guid: 947a199302ad1d948bd5f42894294578,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.5609939
+      value: 0.9900077
       objectReference: {fileID: 0}
     - target: {fileID: 1383315809886104819, guid: 947a199302ad1d948bd5f42894294578,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.0107495785
+      value: 0.08135545
       objectReference: {fileID: 0}
     - target: {fileID: 1383315809886104819, guid: 947a199302ad1d948bd5f42894294578,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.18832517
+      value: -0.7132641
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 947a199302ad1d948bd5f42894294578, type: 3}
@@ -25833,6 +25833,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -375
       objectReference: {fileID: 0}
+    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
+        type: 3}
+      propertyPath: minuts
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
+        type: 3}
+      propertyPath: seconds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4366204862115662225, guid: 3a6fe606d6f21264b90de246e6fe98ce,
         type: 3}
       propertyPath: m_Color.a
@@ -25852,16 +25862,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
-        type: 3}
-      propertyPath: minuts
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
-        type: 3}
-      propertyPath: seconds
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8143689146441156492, guid: 3a6fe606d6f21264b90de246e6fe98ce,
         type: 3}
