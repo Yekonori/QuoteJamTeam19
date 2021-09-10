@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t_Timer: {fileID: 1475493202704653885}
-  timerSpeed: 0.8
-  minuts: 1
-  seconds: 3
+  timerSpeed: 0.505
+  minuts: 2
+  seconds: 20
   shakeAxis: {x: 6, y: 6, z: 6}
   shakeVibrato: 10
   shakeRandomness: 90

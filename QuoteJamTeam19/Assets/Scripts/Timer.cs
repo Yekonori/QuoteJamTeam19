@@ -39,6 +39,10 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
+        minuts = 5;
+        seconds = 0;
+        timerSpeed = 0.5f;
+
         hardMinuts = minuts;
         hardSeconds = seconds;
 

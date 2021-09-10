@@ -4203,6 +4203,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
+        type: 3}
+      propertyPath: minuts
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
+        type: 3}
+      propertyPath: seconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4225693254860830440, guid: 3a6fe606d6f21264b90de246e6fe98ce,
+        type: 3}
+      propertyPath: timerSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8649717624813665313, guid: 3a6fe606d6f21264b90de246e6fe98ce,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -14200,22 +14215,22 @@ PrefabInstance:
     - target: {fileID: 5099387631626332702, guid: 5d4d23d9ec20d4a4588046a621dc7a4f,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.73646545
+      value: 4.2742767
       objectReference: {fileID: 0}
     - target: {fileID: 5099387631626332702, guid: 5d4d23d9ec20d4a4588046a621dc7a4f,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.4903641
+      value: 11.962309
       objectReference: {fileID: 0}
     - target: {fileID: 5099387631626332702, guid: 5d4d23d9ec20d4a4588046a621dc7a4f,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.13176727
+      value: -1.702568
       objectReference: {fileID: 0}
     - target: {fileID: 5099387631626332702, guid: 5d4d23d9ec20d4a4588046a621dc7a4f,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.24518204
+      value: 0.037843704
       objectReference: {fileID: 0}
     - target: {fileID: 5099387631626332703, guid: 5d4d23d9ec20d4a4588046a621dc7a4f,
         type: 3}
