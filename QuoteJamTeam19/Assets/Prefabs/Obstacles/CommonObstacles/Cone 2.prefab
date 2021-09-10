@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8147469301404018343}
-  m_LocalRotation: {x: -0, y: -0, z: 0.71377605, w: 0.700374}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8147469302366172407}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 91.086}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8147469301404018341
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71,8 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8962680602866577265, guid: 186089cfd671034438c1438304d25b0a,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 633052d857e36d2448000297985b653f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +95,7 @@ GameObject:
   - component: {fileID: 8147469302366172405}
   - component: {fileID: 5677145911846767954}
   m_Layer: 0
-  m_Name: Voiture
+  m_Name: Cone 2
   m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,14 +108,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8147469302366172392}
-  m_LocalRotation: {x: 0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: 4, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.428, y: -0.348, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8147469301404018342}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8147469302366172406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,7 +129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.024827145, y: 0.0011417866}
+  m_Offset: {x: 0.0145151615, y: -0.14152311}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -141,7 +140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25603282, y: 0.5072634}
+  m_Size: {x: 0.72421217, y: 0.97822714}
   m_EdgeRadius: 0
 --- !u!50 &8147469302366172405
 Rigidbody2D:
@@ -176,6 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6ab1ee8ee5fd7418f0d07e879d866d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowDuration: 3
+  slowDuration: 1
   slowEffect: 0.5
   dignityDamage: 5
