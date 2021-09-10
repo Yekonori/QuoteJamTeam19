@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 8147469302366172406}
   - component: {fileID: 8147469302366172405}
   - component: {fileID: 5677145911846767954}
+  - component: {fileID: 1712995972201819305}
   m_Layer: 0
   m_Name: Skateboard
   m_TagString: obstacle
@@ -181,6 +182,23 @@ MonoBehaviour:
   slowDuration: 3
   slowEffect: 0.5
   dignityDamage: 5
+--- !u!114 &1712995972201819305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147469302366172392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5ac682d448b4c541a690ec5b0f8df59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDest: {fileID: 538138077023481063}
+  speed: 10
+  delayBeforeGoingBack: 1
+  randomDelayStrenght: 0.1
+  animator: {fileID: 5917968603558764581}
 --- !u!1001 &1807435541194155361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -207,6 +225,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SkateboardObstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824035481600084427, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8824035481600084436, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e,
         type: 3}
@@ -263,11 +286,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8824035481600084437, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2332043712661100382, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e, type: 3}
 --- !u!4 &7160732790504058037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8824035481600084436, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1807435541194155361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5917968603558764581 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5419400572380104004, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1807435541194155361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &538138077023481063 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2189475881252260230, guid: 08fce7d6870dcbe4eb7a8b0c596a8e9e,
     type: 3}
   m_PrefabInstance: {fileID: 1807435541194155361}
   m_PrefabAsset: {fileID: 0}
