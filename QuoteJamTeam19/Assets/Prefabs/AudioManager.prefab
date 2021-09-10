@@ -110,6 +110,12 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
     type: 1
+  - name: child_laugh
+    clip: {fileID: 8300000, guid: 53f41cf9fa8ae394889d5ecc7f0dd9dd, type: 3}
+    volume: 0
+    loop: 0
+    source: {fileID: 0}
+    type: 1
   musicVolume: 0.5
   effectVolume: 0.5
   MSlider: {fileID: 0}

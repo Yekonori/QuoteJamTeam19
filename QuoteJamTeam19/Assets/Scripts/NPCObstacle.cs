@@ -48,6 +48,7 @@ public class NPCObstacle : MonoBehaviour
                 AudioManager.instance.Play("male_ah");
                 break;
             case NPCEnumType.child:
+                AudioManager.instance.Play("child_laugh");
                 break;
         }
     }

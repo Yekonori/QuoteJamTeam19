@@ -83,8 +83,19 @@ public class CharacterMovement : MonoBehaviour
         if(collision.gameObject.tag == "obstacle")
         {
             CommonObstacle commonObstacle = collision.gameObject.GetComponent<CommonObstacle>();
+            switch (commonObstacle.obstacleType)
+            {
+                case ObstacleType.common:
+                    AudioManager.instance.Play("hit_obstacle");
+                    break;
+                case ObstacleType.car:
+                    AudioManager.instance.Play("car_beep");
+                    break;
+                case ObstacleType.skateboard:
+                    AudioManager.instance.Play("skateboard");
+                    break;
+            }
             Destroy(collision.gameObject);
-            AudioManager.instance.Play("hit_obstacle");
             StartCoroutine(Blinker());
 
             if (commonObstacle != null)
