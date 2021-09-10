@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f6ab1ee8ee5fd7418f0d07e879d866d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleType: 1
   slowDuration: 1
   slowEffect: 0.5
   dignityDamage: 5
