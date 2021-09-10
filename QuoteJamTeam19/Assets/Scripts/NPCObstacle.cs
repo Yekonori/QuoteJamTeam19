@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+public enum NPCEnumType
+{
+    gothic,
+    grandMa,
+    friend,
+    child
+}
 public class NPCObstacle : MonoBehaviour
 {
-    public float textSpeed = 1f;
+    public float textDuration = 1f;
 
     [TextArea]
     public string textToSpeak;
@@ -13,8 +20,14 @@ public class NPCObstacle : MonoBehaviour
     public GameObject dialogueBox;
     public TextMeshProUGUI dialogueText;
 
+    private float speedMultiplicator = 1f;
+    private bool canSpeed = true;
+    private float speedCD = 2f;
+    public NPCEnumType NPCtype;
+
     private void Awake()
     {
+        speedCD = 0.5f;
         dialogueBox.SetActive(false);
         dialogueText.text = "";
     }
@@ -23,14 +36,26 @@ public class NPCObstacle : MonoBehaviour
     {
         dialogueBox.SetActive(true);
         StartCoroutine(StartSpeaking());
+        switch (NPCtype)
+        {
+            case NPCEnumType.gothic:
+                AudioManager.instance.Play("female_sigh");
+                break;
+            case NPCEnumType.grandMa:
+                AudioManager.instance.Play("female_woaow");
+                break;
+            case NPCEnumType.friend:
+                AudioManager.instance.Play("male_ah");
+                break;
+            case NPCEnumType.child:
+                break;
+        }
     }
 
     private IEnumerator StartSpeaking()
     {
         int textLength = textToSpeak.Length;
-        float textSpeedRatio = textSpeed / textLength;
-
-        float speedMultiplicator = 1f;
+        float textSpeedRatio = textDuration / textLength;
 
         foreach (char character in textToSpeak)
         {
@@ -38,11 +63,7 @@ public class NPCObstacle : MonoBehaviour
 
             if (Input.GetButton("Jump"))
             {
-                speedMultiplicator = 50f;
-            }
-            else
-            {
-                speedMultiplicator = 1f;
+                StartCoroutine(StartSpeedSpeak());
             }
 
             yield return new WaitForSeconds(textSpeedRatio / speedMultiplicator);
@@ -52,5 +73,30 @@ public class NPCObstacle : MonoBehaviour
         dialogueBox.SetActive(false);
         gameObject.SetActive(false);
         Destroy(this.gameObject);
+    }
+
+    private IEnumerator StartSpeedSpeak()
+    {
+        if (canSpeed)
+        {
+            speedMultiplicator = 50f;
+            canSpeed = false;
+            AudioManager.instance.Play("radio_beep");
+
+            yield return new WaitForSeconds(1f);
+
+            StopSpeedSpeak();
+        }
+    }
+
+    private void StopSpeedSpeak()
+    {
+        speedMultiplicator = 1f;
+        Invoke("CanSpeedAgain", speedCD);
+    }
+
+    private void CanSpeedAgain()
+    {
+        canSpeed = true;
     }
 }

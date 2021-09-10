@@ -17,6 +17,7 @@ public class DignityBar : MonoBehaviour
     public Image fillImage;
 
     public CharacterMovement player;
+    private Animator animator;
 
     [Header("Colors")]
 
@@ -43,6 +44,7 @@ public class DignityBar : MonoBehaviour
     {
         maxDignity = 100f;
         dignitySlider = GetComponentInChildren<Slider>();
+        animator = GameObject.Find("Player").GetComponentInChildren<Animator>();
 
         if (GameManager.Instance.DignityToSet)
         {
@@ -90,10 +92,12 @@ public class DignityBar : MonoBehaviour
         if (dignitySlider.value <= dangerValue)
         {
             fillImage.DOColor(dangerColor, 1f);
+            animator.SetTrigger("Sale02");
         }
         else if (dignitySlider.value <= middleValue)
         {
             fillImage.DOColor(middleColor, 1f);
+            animator.SetTrigger("Sale01");
         }
         else
         {

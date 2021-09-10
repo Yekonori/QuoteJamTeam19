@@ -12,10 +12,18 @@ public class MenuManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+
         if (instance != null && instance != this)
             Destroy(gameObject);
+    }
 
-        instance = this;
+    private void Start()
+    {
+        AudioManager.instance.Play("title_screen");    
     }
 
     public void OpenTutorial()

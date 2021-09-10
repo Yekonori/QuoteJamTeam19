@@ -84,6 +84,7 @@ public class CharacterMovement : MonoBehaviour
         {
             CommonObstacle commonObstacle = collision.gameObject.GetComponent<CommonObstacle>();
             Destroy(collision.gameObject);
+            AudioManager.instance.Play("hit_obstacle");
             StartCoroutine(Blinker());
 
             if (commonObstacle != null)
