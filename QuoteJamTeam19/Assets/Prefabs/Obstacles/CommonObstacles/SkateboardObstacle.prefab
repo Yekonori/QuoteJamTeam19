@@ -125,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2189475881252260230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8824035481600084436}
@@ -601,7 +601,6 @@ GameObject:
   - component: {fileID: 8824035481600084437}
   - component: {fileID: 8824035481600084438}
   - component: {fileID: 2332043712661100382}
-  - component: {fileID: 9001822175174880275}
   m_Layer: 0
   m_Name: SkateboardObstacle
   m_TagString: obstacle
@@ -690,18 +689,3 @@ MonoBehaviour:
   delayBeforeGoingBack: 1
   randomDelayStrenght: 0.1
   animator: {fileID: 5419400572380104004}
---- !u!114 &9001822175174880275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8824035481600084427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f6ab1ee8ee5fd7418f0d07e879d866d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slowDuration: 1
-  slowEffect: 0.5
-  dignityDamage: 0
