@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KidMovement : MonoBehaviour
 {
-    public GameObject aDest, bDest;
+    public GameObject bDest;
     public float speed = 10f;
     public float delayBeforeGoingBack = 1.0f;
     public float randomDelayStrenght = 0.1f;
@@ -12,58 +12,107 @@ public class KidMovement : MonoBehaviour
     private bool isGoingUp;
     private bool canMove = true;
     private Rigidbody2D rb;
+
+    private Vector3 start;
+    private Vector3 finish;
+
+    private bool atStart = true;
+
+    private float tolerance;
+
+    public Animator animator;
+
     void Start()
     {
-        //transform.position = aDest.transform.position;
-        isGoingUp = true;
-        rb = gameObject.GetComponent<Rigidbody2D>();
-        
+        start = transform.position;
+        finish = bDest.transform.position;
+
+        SetGoUp();
+
+        tolerance = speed * Time.deltaTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isGoingUp && canMove)
+        if (!canMove)
+            return;
+
+        if (atStart)
         {
-            rb.velocity = Vector2.up * speed * Time.deltaTime;
-            //sprite haut
+            if (transform.position != finish)
+            {
+                Vector3 heading = finish - transform.position;
+                transform.position += (heading / heading.magnitude) * speed * Time.deltaTime;
+
+                if (heading.magnitude < tolerance)
+                {
+                    transform.position = finish;
+                    StartCoroutine(Wait());
+                }
+            }
         }
-        if(!isGoingUp && canMove)
+        else
         {
-            //-vector.up
-            rb.velocity = Vector2.up * -speed * Time.deltaTime;
+            if (transform.position != start)
+            {
+                Vector3 heading = start - transform.position;
+                transform.position += (heading / heading.magnitude) * speed * Time.deltaTime;
+
+                if (heading.magnitude < tolerance)
+                {
+                    transform.position = start;
+                    StartCoroutine(Wait());
+                }
+            }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "A")
+        if (collision.gameObject.tag == "Player")
         {
-            isGoingUp = true;
-            StartCoroutine(Wait(delayBeforeGoingBack));
-        }
-
-        if(collision.gameObject.name == "B")
-        {
-            isGoingUp = false;
-            StartCoroutine(Wait(delayBeforeGoingBack));
-        }
-        if (!canMove)
-        {
-            rb.velocity = Vector2.zero;
+            canMove = false;
         }
     }
 
-    public IEnumerator Wait(float duration)
+    public IEnumerator Wait()
     {
-        float randomDuration = Random.Range(duration - randomDelayStrenght, duration + randomDelayStrenght);
+        float randomDuration = Random.Range(delayBeforeGoingBack - randomDelayStrenght, delayBeforeGoingBack + randomDelayStrenght);
+
         canMove = false;
-        aDest.GetComponent<Collider2D>().enabled = false;
-        bDest.GetComponent<Collider2D>().enabled = false;
+
+        atStart = !atStart;
+        SetGoUp();
+
         yield return new WaitForSeconds(randomDuration);
+
         canMove = true;
-        yield return new WaitForSeconds(randomDuration);
-        aDest.GetComponent<Collider2D>().enabled = true;
-        bDest.GetComponent<Collider2D>().enabled = true;
+    }
+
+    private void SetGoUp()
+    {
+        if (atStart)
+        {
+            if (finish.x > start.x)
+            {
+                animator.SetBool("GoUp", true);
+            }
+            else
+            {
+                animator.SetBool("GoUp", false);
+            }
+        }
+        else
+        {
+            if (finish.x > start.x)
+            {
+                animator.SetBool("GoUp", false);
+            }
+            else
+            {
+                animator.SetBool("GoUp", true);
+            }
+        }
     }
 }
