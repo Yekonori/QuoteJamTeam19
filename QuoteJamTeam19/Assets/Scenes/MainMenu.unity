@@ -1111,6 +1111,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3517091776230078967, guid: ce889c45358fbd84392299a234668819,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ca91e320289e3f479482657315c50f1,
+        type: 3}
+    - target: {fileID: 3517091777092304241, guid: ce889c45358fbd84392299a234668819,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 399.888
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517091777092304241, guid: ce889c45358fbd84392299a234668819,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 196.706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517091777092304241, guid: ce889c45358fbd84392299a234668819,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -650.0709
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517091777092304241, guid: ce889c45358fbd84392299a234668819,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 361.33087
+      objectReference: {fileID: 0}
     - target: {fileID: 3517091777092304242, guid: ce889c45358fbd84392299a234668819,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1145,6 +1171,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517091777092304243, guid: ce889c45358fbd84392299a234668819,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce889c45358fbd84392299a234668819, type: 3}
