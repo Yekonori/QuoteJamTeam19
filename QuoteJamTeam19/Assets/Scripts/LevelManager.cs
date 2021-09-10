@@ -6,7 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     private void Start()
     {
+        AudioManager.instance.StopPlayAll();
         GameManager.Instance.StartParty();
-        AudioManager.instance.Play("skateboard");
+        AudioManager.instance.Play("game_music");
     }
 }
